@@ -1,0 +1,230 @@
+.brends__wrapper {
+  height: 200px;
+  background-color: $light-background;
+  overflow-x: hidden;
+}
+
+.header__brends {
+  height: 80px;
+  background: linear-gradient(
+    90deg,
+    $light-background 1.39%,
+    $white-color 100%
+  );
+  text-align: center;
+  border-top: 1px solid $border-color;
+}
+
+.header__title {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  color: $menu-text-color;
+  display: block;
+  padding: 16px;
+  text-align: start;
+  white-space: wrap;
+  font-weight: normal;
+}
+
+.brends__container {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.brends__box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.brend__item {
+  min-width: 240px;
+  height: 72px !important;
+  background: $white-color;
+  border: 1px solid $soft-gray;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin: 0 0 16px 16px;
+  align-items: center;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.brends__wrapper::after {
+  content: "";
+  background: none;
+  background-image: url(../img/fade.png);
+  height: 72px;
+  width: 24px;
+  z-index: 20;
+  position: absolute;
+  right: 0px;
+  top: 684px;
+}
+
+.btn__brend {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  margin-right: 16px;
+}
+
+.brend__img {
+  margin-left: 16px;
+}
+
+.btn__read-next.show {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .brends__wrapper {
+    height: 324px;
+    &::after {
+      display: none;
+    }
+  }
+
+  .brends__container {
+    margin-top: 24px;
+    margin-left: 24px;
+  }
+
+  .brends__box {
+    flex-wrap: wrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    max-height: 160px;
+  }
+  .brend__item {
+    margin: 0 22px 24px 0;
+    min-width: 224px;
+  }
+
+  .btn__read-next.show {
+    position: relative;
+    display: flex;
+    width: 134px;
+    height: 24px;
+    margin-top: 24px;
+    border: none;
+    background-color: $light-background;
+  }
+
+  .btn__read-next.show:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+
+    transition: 0.3s;
+  }
+
+  .btn__read-next.show::before {
+    content: attr(data-caption);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $main-text-color;
+    position: absolute;
+    left: 28px;
+    top: 1px;
+  }
+
+  .btn__read-next.show::after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/expand.png);
+    position: absolute;
+    right: 108px;
+  }
+
+  .btn__read-next.hide {
+    position: relative;
+    display: flex;
+    width: 134px;
+    height: 24px;
+    margin-top: 24px;
+    border: none;
+    background-color: $light-background;
+  }
+
+  .btn__read-next.hide:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+
+    transition: 0.3s;
+  }
+
+  .btn__read-next.hide::before {
+    content: "Скрыть";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $main-text-color;
+    position: absolute;
+    left: 28px;
+    top: 1px;
+  }
+
+  .btn__read-next.hide::after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/expand.png);
+    transform: rotate(180deg);
+    position: absolute;
+    right: 108px;
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+}
+
+@media (min-width: 1120px) {
+  .brends__container {
+    margin-top: 24px;
+    margin-left: 32px;
+  }
+  .brend__item {
+    margin: 0 32px 16px 0;
+    min-width: 240px;
+  }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: -4px !important;
+}
+
+.wrapper--mid {
+  height: 526px;
+}
+
+.section--mid {
+  max-height: 361px;
+}
+
+.wrapper--desc {
+  height: 415px;
+}
+
+.section--desc {
+  max-height: 248px;
+}
+
+.hidden {
+  display: none;
+}

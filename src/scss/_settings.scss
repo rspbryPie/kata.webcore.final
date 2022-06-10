@@ -1,0 +1,191 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*:focus {
+  outline: 2px solid transparent;
+}
+
+body {
+  overflow-anchor: none;
+  margin: 0;
+  font-family: "TT Lakes";
+  color: $main-text-color;
+  background-color: $light-gray;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+// img {
+//   height: auto;
+//   max-width: 100%;
+//   object-fit: cover;
+// }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+/*Меняем цвет плейсхолдера в инпуте Сафари и Хром*/
+/*Меняем цвет плейсхолдера в инпуте для Мозилы */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: $gray;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+footer {
+  background: $footer-background;
+}
+
+.is--hidden {
+  display: none !important;
+}
+
+.btn--reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.main__btn {
+  cursor: pointer;
+  margin: 24px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  &:last-child {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  &:hover {
+    transform: scale(1.2);
+  }
+  // &:focus {
+  //   box-shadow: 0 0 2px $light-blue;
+  // }
+}
+
+.btn__check {
+  background-image: url(../img/checkstatus.png);
+}
+
+.btn__repair {
+  background-image: url(../img/repair.png);
+}
+
+.burger__btn {
+  background-image: url(../img/burger.png);
+}
+
+.btn__profile {
+  background-image: url(../img/profile.png);
+}
+
+.btn__chat {
+  background-image: url(../img/chat.png);
+}
+
+.btn__call {
+  background-image: url(../img/call.png);
+}
+
+.btn__search {
+  background-image: url(../img/search.png);
+}
+
+.burger__btn-close {
+  margin-left: 0;
+  background-image: url(../img/burger_close.png);
+}
+
+.btn:active,
+.btn:focus {
+  outline: none;
+}
+
+.error {
+  border: 2px var(--error-red) solid !important;
+}
+
+.site-container {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+}
+
+.main__content {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+// @media (min-width: 1120px) {
+//   .main__content {
+//     margin: 0 auto;
+//   }
+// }
+// @media (min-width: 1440) {
+//   .site-container {
+//     display: flex;
+//   }
+//   .main__content {
+//     margin: 0;
+//   }
+// }
+// .container {
+//   max-width: 1810px;
+//   margin: 0 auto;
+//   padding-right: 20px;
+//   padding-left: 20px;
+
+//   @media (max-width: 1200px) {
+//     padding-right: 50px;
+//     padding-left: 50px;
+//   }
+
+//   @media (max-width: 576px) {
+//     padding-right: 15px;
+//     padding-left: 15px;
+//   }
+// }
